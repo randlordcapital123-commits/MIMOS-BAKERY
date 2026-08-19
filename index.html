@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimos Bakery & Confectionery | Artisanal Delights</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Panel -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo-wrap">
+                <img id="siteLogo" src="" alt="Mimos Logo" class="brand-logo hidden">
+                <span id="brandName" class="brand-name">MIMOS</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu & Order</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#admin" class="admin-link-btn" onclick="toggleAdminPanel()"><i class="fa-solid fa-lock"></i> Admin</a>
+            </nav>
+            <div class="cart-trigger" onclick="toggleCart()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount" class="cart-badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subheading">Mimos Bakery & Confectionery</span>
+            <h1>Handcrafted Elegance In Every Single Bite</h1>
+            <p>eMalahleni’s premier destination for spongy cakes, luxury pastries, and custom-made confections.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-gold">Explore Menu</a>
+                <a href="https://wa.me/27824876140" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section id="menu" class="section container">
+        <div class="section-title">
+            <h2>Our Confectionery Collections</h2>
+            <p>Select your favorite artisanal goods to build a direct WhatsApp order.</p>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterCategory('all')">All Delights</button>
+            <button class="filter-btn" onclick="filterCategory('Cakes')">Cakes</button>
+            <button class="filter-btn" onclick="filterCategory('Pastries')">Pastries</button>
+            <button class="filter-btn" onclick="filterCategory('Confections')">Confections</button>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-alt">
+        <div class="container two-col">
+            <div class="col-text">
+                <span class="subheading">Our Passion</span>
+                <h2>Handcrafted Quality & Friendly Service</h2>
+                <p>Located in the heart of eMalahleni, Mimos Bakery and Confectionery is renowned for its artisanal approach to baking. We focus on freshly baked, made-to-order creations crafted with premium ingredients.</p>
+                <div class="info-badges">
+                    <div class="badge"><i class="fa-solid fa-clock"></i> Open Daily: 8:00 AM - 5:00 PM</div>
+                    <div class="badge"><i class="fa-solid fa-location-dot"></i> Tasbet Park, eMalahleni</div>
+                </div>
+            </div>
+            <div class="col-image">
+                <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=80" alt="Bakery Display" class="img-styled">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="contact" class="section container">
+        <div class="section-title">
+            <h2>Visit Mimos Bakery</h2>
+            <p>Stop by our shop or reach out directly for custom order inquiries.</p>
+        </div>
+        <div class="contact-card">
+            <div class="contact-details">
+                <h3>Contact Information</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Extension 3, Kadet St, Tasbet Park, eMalahleni, 1040</p>
+                <p><i class="fa-solid fa-phone"></i> 082 487 6140</p>
+                <p><i class="fa-solid fa-clock"></i> Monday - Sunday: 8:00 AM - 5:00 PM</p>
+                <a href="https://wa.me/27824876140" class="btn btn-gold width-100" target="_blank"><i class="fa-brands fa-whatsapp"></i> Direct WhatsApp Inquiry</a>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.3571239857!2d29.2312!3d-25.9011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzA0LjAiUyAyOcKwMTMnNTIuMyJF!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Selected Delights</h3>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-body"></div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cartTotal">R 0.00</span>
+            </div>
+            <button class="btn btn-whatsapp-order" onclick="sendWhatsAppOrder()"><i class="fa-brands fa-whatsapp"></i> Send Order to WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>Mimos Store Management</h2>
+                <button class="close-btn" onclick="toggleAdminPanel()">&times;</button>
+            </div>
+            
+            <!-- Login State -->
+            <div id="adminLoginView" class="admin-body">
+                <div class="admin-card auth-card">
+                    <i class="fa-solid fa-lock auth-icon"></i>
+                    <h3>Admin Authentication</h3>
+                    <p class="auth-sub">Enter administrator password to edit prices and store photos.</p>
+                    <form id="adminLoginForm">
+                        <input type="password" id="adminPasswordInput" placeholder="Enter Password" class="input-field" required>
+                        <p id="loginError" class="login-error hidden">Incorrect password. Please try again.</p>
+                        <button type="submit" class="btn btn-gold width-100">Unlock Dashboard</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Protected Dashboard State -->
+            <div id="adminDashboardView" class="admin-body hidden">
+                <div class="admin-toolbar">
+                    <span>Logged in as Administrator</span>
+                    <button class="btn btn-outline btn-sm" onclick="adminLogout()">Log Out</button>
+                </div>
+
+                <!-- Logo Management -->
+                <div class="admin-card">
+                    <h3>Update Store Logo</h3>
+                    <form id="logoForm" class="form-group-inline">
+                        <input type="file" id="logoInput" accept="image/*" required>
+                        <button type="submit" class="btn btn-gold">Upload Logo</button>
+                    </form>
+                </div>
+
+                <!-- Add/Edit Product -->
+                <div class="admin-card">
+                    <h3 id="formTitle">Add New Product</h3>
+                    <form id="productForm">
+                        <input type="hidden" id="prodId">
+                        <div class="form-grid">
+                            <input type="text" id="prodName" placeholder="Product Name" required class="input-field">
+                            <select id="prodCategory" class="input-field">
+                                <option value="Cakes">Cakes</option>
+                                <option value="Pastries">Pastries</option>
+                                <option value="Confections">Confections</option>
+                            </select>
+                            <input type="number" step="0.01" id="prodPrice" placeholder="Price (R)" required class="input-field">
+                        </div>
+                        <textarea id="prodDesc" placeholder="Product Description" class="input-field"></textarea>
+                        
+                        <!-- Drag and Drop Image Box -->
+                        <div id="dropZone" class="drop-zone">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>Drag & Drop Product Image Here, or <span>Browse</span></p>
+                            <input type="file" id="prodImage" accept="image/*" class="drop-zone-input">
+                            <div id="imagePreview" class="image-preview"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-gold">Save Product</button>
+                            <button type="button" class="btn btn-outline" onclick="resetForm()">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Manage Existing Products -->
+                <div class="admin-card">
+                    <h3>Inventory & Price Management</h3>
+                    <div id="adminProductList" class="admin-product-list"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Mimos Bakery and Confectionery. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
