@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mimos Bakery & Confectionery</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo" id="logoContainer">
+                <img id="siteLogo" src="https://via.placeholder.com/180x60/C9A96E/FFFFFF?text=MIMOS" alt="Mimos Bakery" />
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#admin" class="nav-link admin-trigger" id="adminTrigger"><i class="fas fa-user-cog"></i> Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">✦ Artisanal Bakery</span>
+            <h1 class="hero-title">Mimos Bakery<br /><span>&amp; Confectionery</span></h1>
+            <p class="hero-subtitle">Handcrafted with love — fresh, luxurious, and made to order.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Explore Menu</a>
+                <a href="https://wa.me/27824876140" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Years of Excellence</span></div>
+                <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Signature Treats</span></div>
+                <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Fresh Daily</span></div>
+            </div>
+        </div>
+        <div class="hero-scroll"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Selection</span>
+                <h2 class="section-title">Indulge in <span>Perfection</span></h2>
+                <p class="section-subtitle">Each creation is baked fresh daily with premium ingredients.</p>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="products-cta">
+                <p>Can't find what you're looking for? <strong>Custom orders welcome!</strong></p>
+                <a href="https://wa.me/27824876140" target="_blank" class="btn btn-whatsapp btn-lg">
+                    <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-frame">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=700&fit=crop" alt="Bakery interior" />
+                        <div class="about-image-badge">✦ Est. 2016</div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Where <span>Tradition</span> Meets <span>Luxury</span></h2>
+                    <p class="about-description">
+                        Mimos Bakery and Confectionery is a local bakery and confectionery located in eMalahleni,
+                        South Africa, offering a range of baked goods and sweet treats. Known for its quality and
+                        variety, it's a popular spot for both locals and visitors looking for fresh, handmade desserts.
+                    </p>
+                    <p class="about-description">
+                        The bakery is renowned for its cakes, pastries, and confections, with a focus on freshly baked
+                        and made-to-order items. Customers often praise the delicious and spongy cakes, making it a
+                        go-to destination for sweet cravings.
+                    </p>
+                    <div class="about-values">
+                        <div class="value"><i class="fas fa-seedling"></i><span>Fresh Ingredients</span></div>
+                        <div class="value"><i class="fas fa-heart"></i><span>Made with Love</span></div>
+                        <div class="value"><i class="fas fa-star"></i><span>Premium Quality</span></div>
+                        <div class="value"><i class="fas fa-clock"></i><span>Baked Daily</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Visit <span>Our Bakery</span></h2>
+                <p class="section-subtitle">We'd love to welcome you and share our sweet creations.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                    <h4>Address</h4>
+                    <p>Extension 3, Kadet St, Tasbet Park,<br />eMalahleni, 1040, South Africa</p>
+                    <a href="https://maps.google.com/?q=Extension+3+Kadet+St+Tasbet+Park+eMalahleni+1040" target="_blank" class="contact-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <h4>Opening Hours</h4>
+                    <p><strong>Monday – Friday</strong><br />8:00 AM – 5:00 PM</p>
+                    <p><strong>Saturday</strong><br />8:00 AM – 3:00 PM</p>
+                    <p><strong>Sunday</strong><br />Closed</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Contact</h4>
+                    <p><a href="tel:+27824876140" class="contact-link">082 487 6140</a></p>
+                    <p><a href="https://wa.me/27824876140" target="_blank" class="contact-link whatsapp-link"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></p>
+                    <div class="contact-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img id="footerLogo" src="https://via.placeholder.com/140x40/C9A96E/FFFFFF?text=MIMOS" alt="Mimos Bakery" />
+                    <p>Handcrafted luxury baked goods &amp; confections in eMalahleni.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone"></i> 082 487 6140</p>
+                    <p><i class="fas fa-envelope"></i> info@mimosbakery.co.za</p>
+                    <p><i class="fas fa-location-dot"></i> eMalahleni, 1040</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mimos Bakery &amp; Confectionery. All rights reserved.</p>
+                <span class="footer-admin-link" id="footerAdminTrigger"><i class="fas fa-user-cog"></i> Admin</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= ADMIN MODAL ================= -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-modal-content">
+            <button class="admin-modal-close" id="adminModalClose">&times;</button>
+            <!-- Login -->
+            <div class="admin-login" id="adminLogin">
+                <div class="admin-login-icon"><i class="fas fa-lock"></i></div>
+                <h3>Admin Access</h3>
+                <p>Enter your password to manage the bakery.</p>
+                <form id="adminLoginForm">
+                    <div class="form-group"><input type="password" id="adminPassword" placeholder="Enter password" required /></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Unlock Dashboard</button>
+                    <p class="admin-hint">Default: <strong>admin123</strong></p>
+                </form>
+            </div>
+            <!-- Dashboard -->
+            <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+                <div class="admin-dashboard-header">
+                    <h3><i class="fas fa-crown"></i> Admin Dashboard</h3>
+                    <button class="btn btn-outline" id="adminLogoutBtn">Logout</button>
+                </div>
+                <!-- Logo Upload -->
+                <div class="admin-section">
+                    <h4><i class="fas fa-image"></i> Brand Logo</h4>
+                    <div class="admin-logo-upload">
+                        <div class="admin-logo-preview" id="adminLogoPreview">
+                            <img id="adminLogoImg" src="https://via.placeholder.com/180x60/C9A96E/FFFFFF?text=MIMOS" alt="Logo" />
+                        </div>
+                        <div class="admin-upload-area" id="logoUploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag &amp; drop a new logo here, or click to browse</p>
+                            <input type="file" id="logoFileInput" accept="image/*" />
+                            <span class="admin-upload-hint">PNG, JPG, SVG recommended</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="saveLogoBtn">Save Logo</button>
+                    </div>
+                </div>
+                <!-- Add Product -->
+                <div class="admin-section">
+                    <h4><i class="fas fa-plus-circle"></i> Add New Product</h4>
+                    <form id="addProductForm" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group"><label>Product Name</label><input type="text" id="productName" placeholder="e.g. Chocolate Cake" required /></div>
+                            <div class="form-group"><label>Price (ZAR)</label><input type="number" id="productPrice" placeholder="49.99" step="0.01" required /></div>
+                        </div>
+                        <div class="form-group"><label>Description</label><textarea id="productDesc" placeholder="Brief description" rows="2"></textarea></div>
+                        <div class="form-group">
+                            <label>Product Image</label>
+                            <div class="admin-upload-area" id="productUploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag &amp; drop product image here, or click to browse</p>
+                                <input type="file" id="productFileInput" accept="image/*" />
+                            </div>
+                            <div id="productImagePreview" class="admin-image-preview"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Product</button>
+                    </form>
+                </div>
+                <!-- Manage Products -->
+                <div class="admin-section">
+                    <h4><i class="fas fa-list"></i> Manage Products</h4>
+                    <div class="admin-product-list" id="adminProductList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

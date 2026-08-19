@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Chocolate Fudge Cake",
+    "price": 49.99,
+    "desc": "Rich, moist chocolate cake layered with velvety fudge ganache.",
+    "image": "https://images.unsplash.com/photo-1603532648955-039310d9a75b?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Vanilla Cupcake Set",
+    "price": 24.99,
+    "desc": "Classic vanilla cupcakes with buttercream swirl – set of 6.",
+    "image": "https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=400&h=300&fit=crop"
+  }
+]
